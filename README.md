@@ -1,6 +1,6 @@
 #  Wearable-Based Cardiovascular Risk Predictor
 
-A **machine learning and AI-powered application** that predicts **cardiovascular risk** based on **wearable device health data**.  
+A **Deep learning and AI-powered application** that predicts **cardiovascular risk** based on **wearable device health data**.  
 It uses deep learning (TensorFlow/Keras) and SHAP explainability, with an interactive UI built using **Streamlit**.
 
 ---
@@ -66,7 +66,51 @@ wearable_cvd_app/
 └── README.md
 ```
 
+---
 
+## 🧠 Model Training
+
+To train the model on the dataset:
+
+```bash
+python train_model.py
+```
+
+This generates:
+
+* `models/wearable_risk_model.h5`
+* `models/wearable_scaler.pkl`
+* `models/features.csv`
+
+---
+
+## 🤖 Models Used
+
+* **LSTM (Long Short-Term Memory)** deep learning model for sequence-based prediction of cardiovascular risk.
+* **SHAP (SHapley Additive exPlanations)** for feature importance analysis.
+
+---
+
+## 🧹 Preprocessing Steps
+
+* Label Encoding for categorical variables (e.g., ECG, Stress Level)
+* Standardization of numeric features using `StandardScaler`
+* Reshaping input data into 3D format `(samples, timesteps, features)` for LSTM input.
+
+---
+
+## 🛠 Tech Stack
+
+* Python 3.x
+* TensorFlow / Keras
+* scikit-learn
+* pandas
+* numpy
+* SHAP
+* Streamlit
+* Plotly / Matplotlib
+
+---
 ## ⚙ Installation
 
 ### 1️⃣ Clone the repository
@@ -83,13 +127,14 @@ python -m venv venv
 ```
 
 Activate it:
-**Windows**:
+
+* **Windows**:
 
 ```bash
 venv\Scripts\activate
 ```
 
-**Mac/Linux**:
+* **Mac/Linux**:
 
 ```bash
 source venv/bin/activate
@@ -105,56 +150,15 @@ pip install -r requirements.txt
 
 ## 🚀 Usage
 
-Run the app:
+### Run the app
 
 ```bash
 streamlit run app.py
 ```
 
-Then open:
+Then open in your browser: [http://localhost:8501](http://localhost:8501)
 
-```bash
-http://localhost:8501
-```
-
----
-
-## 🧠 Model Training
-
-To train the model on the dataset:
-
-```bash
-python train_model.py
-```
-
-Generated files:
-
-```bash
-models/wearable_risk_model.h5
-models/wearable_scaler.pkl
-models/features.csv
-```
-
----
-
-## 🛠 Tech Stack
-
-```bash
-Python 3.x
-TensorFlow / Keras
-scikit-learn
-pandas
-numpy
-SHAP
-Streamlit
-Plotly / Matplotlib
-```
-
----
 
 ## 📜 License
 
-```bash
-This project is intended for educational purposes only and should not be used for actual medical diagnosis.
-```
-
+This project is intended for **educational purposes only** and should **not be used for actual medical diagnosis**.
