@@ -28,7 +28,7 @@ model, scaler, features = load_model_and_scaler()
 # -------------------------
 # Title & info
 # -------------------------
-st.title("⌚ Wearable-based Cardiovascular Risk Predictor")
+st.title("Wearable-Based Cardiovascular Risk Predictor")
 st.markdown("Enter your wearable health data to predict cardiovascular risk.")
 
 st.info(
