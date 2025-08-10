@@ -31,7 +31,6 @@ model, scaler, features = load_model_and_scaler()
 st.title("Wearable-Based Cardiovascular Risk Predictor")
 st.markdown("Enter your wearable health data to predict cardiovascular risk.")
 
-st.write("⚠ Please note that this is a simulated model and actual results may vary.")
 
 # -------------------------
 # Manual Input Form
